@@ -1,0 +1,17 @@
+{
+  "name": "yawa-server",
+  "version": "0.1.0",
+  "description": "Test project for MEA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Nic Loomans <nicholas@loomans.kiwi.nz>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0"
+  }
+}

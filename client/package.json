@@ -1,0 +1,16 @@
+{
+  "name": "yawa-client",
+  "version": "0.1.0",
+  "description": "Test project for MEA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "author": "Nic Loomans <nicholas@loomans.kiwi.nz>",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "http-server": "^0.11.1"
+  }
+}

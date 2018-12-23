@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yawa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<section id="town-input">
+    <label for="town-input__input">Enter town: </label>
+    <input id="town-input__input" />
+</section>
+<section id="list"></section>
+<section id="detail"></section>
+
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
+
+<script id="tmpl-days-list" type="text/x-handlebars-template">
+    <ul class="days-list">
+        {{#each days}}
+            <li class="days-list__day" data-index="{{@index}}">{{date dt}} {{main.temp}} {{weather.0.description}}</li>
+        {{/each}}
+    </ul>
+</script>
+<script id="tmpl-days-detail" type="text/x-handlebars-template">
+    <h2>{{date day.dt}}</h2>
+    <p>{{city}}</p>
+    <p>Temp: {{day.main.temp}}&deg;C</p>
+    <p>High: {{day.main.temp_max}}&deg;C</p>
+    <p>Low: {{day.main.temp_min}}&deg;C</p>
+    <p>{{day.weather.0.description}}</p>
+    <img src="http://openweathermap.org/img/w/{{day.weather.0.icon}}.png" alt="{{day.weather.0.description}}" />
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
